@@ -38,15 +38,22 @@ public class PokemonLabel extends JLabel{
     public void popPokemon(){
         //TODO when a pokemon pop up
         Random random = new Random();
-        int tmp = random.nextInt(5);
+        int tmp = random.nextInt(50);
         int showPoke;
-        if(tmp>=0 && tmp<=2)
+        if(tmp%5==0)
         {
-            showPoke=tmp;
+            showPoke=tmp%3;
+        }
+        else if(tmp%47==0)
+        {
+            showPoke=32;
         }
         else
         {
-            showPoke=tmp+59;
+            if(tmp%2==0)
+                showPoke=62;
+            else
+                showPoke=64;
         }
        ImageIcon img= new ImageIcon(PokemonSprite.getSprite(showPoke));
        setIcon(img);

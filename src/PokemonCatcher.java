@@ -42,9 +42,13 @@ public class PokemonCatcher {
                         public void run() {
                             int id;
                             id=pokemon.caught();
-                            if(id>=0 && id<=3)
+                            if(id>=0 && id<=2)
                             {
                                 score++;
+                            }
+                            else if(id==32)
+                            {
+                                score=score+5;
                             }
                             else
                             {

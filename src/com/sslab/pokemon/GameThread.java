@@ -31,7 +31,7 @@ public class GameThread implements Runnable {
 
                 //TODO use Thread.sleep to make the loop go slower
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(300);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
